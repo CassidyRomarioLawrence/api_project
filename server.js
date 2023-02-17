@@ -17,6 +17,8 @@ app.get("/", (req, res) => {
     res.json({ message: "Welcome to Vans Sneaker Store." });
 });
 
+require('./app/routes/vans.routes.js')(app);
+
 const PORT = process.env.PORT || 2020;
 app.listen(PORT, () => {
     console.log(`Server is running on ${PORT}.`);
